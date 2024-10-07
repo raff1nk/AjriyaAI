@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website for My Best Friend</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Login Section -->
+    <div class="login-container active" id="login-section">
+      <div class="box">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" />
+        <input type="password" id="password" placeholder="Password" />
+        <button onclick="login()">Login</button>
+        <p id="error-message" style="color: red"></p>
+      </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="main-container" id="main-content" style="display: none">
+      <!-- Backsound Music -->
+      <audio id="backsound" autoplay loop>
+        <source id="audio-source" src="Lifeline.mp3" type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio>
+
+      <!-- Music Title and Skip Button -->
+      <div class="music-title" id="music-title">
+        Lifeline
+        <button id="skip-button" onclick="skipMusic()">Skip Music</button>
+      </div>
+
+      <div class="container">
+        <!-- Section 1 -->
+        <div class="section active" id="section1">
+          <div class="box">
+            <h2>Hai, Teh Aji 🌸✨</h2>
+            <p>
+              Hmm, aku gak yakin kapan dirimu bakal baca pesan ini, tapi mungkin sekitar bulan Oktober? 🍂 Dari perspektif dirimu, mungkin pesan ini terasa baru saja dibuat kemarin, tapi percayalah, dari sisiku, momen dirimu membaca ini
+              masih sekitar enam bulan lagi. Aku menulis ini di bulan Maret, beberapa hari setelah ulang tahunmu. 🎂🎉 Jadi, selamat ulang tahun! 🥳✨ Memang sudah terlambat beberapa bulan, tapi di sisiku, rasanya baru saja kemarin dirimu
+              ulang tahun. Maaf ya, aku gak bisa ikut merayakan. 😅🎈 Begitulah...
+            </p>
+          </div>
+          <div class="buttons">
+            <button onclick="navigate('next', 1)">Selanjutnya</button>
+          </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="section" id="section2">
+          <div class="box">
+            <h2>Music 🎶🎵</h2>
+            <p>
+              Ohh ya, mungkin dirimu juga kaget, di website ini ada lagunya. 🎶 Keren, kan? Keren lah, siapa lagi yang bikin kalau bukan aku 😎😎. Tapi, nggak tahu kenapa, setiap kali aku ngeliat dirimu dalam berbagai bentuk, di otakku itu
+              kayak ada fitur autoplay musik gitu 🎧, dan musik yang diputer juga dua itu terus, "Lifeline" karya Dennis van Aarssen, sama satu lagi yang _________*rahasia.... 🎵🎤
+            </p>
+          </div>
+          <div class="buttons">
+            <button onclick="navigate('prev', 2)">Sebelumnya</button>
+            <button onclick="navigate('next', 2)">Selanjutnya</button>
+          </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="section" id="section3">
+          <div class="box">
+            <h2>Music 💪💡</h2>
+            <p>
+              Entah kenapa, setiap kali denger lagu ini, pikiranku selalu melayang ke dirimu. Coba deh, lihat lirik lagu dan cara Dennis membawakan lagu ini; rasanya kayak dia ngomongin dirimu dan Skema banget. 🎯 Maju sedikit ada masalah,
+              tapi di balik setiap masalah itu, selalu ada solusi dan harapan yang layak diperjuangkan. 💪✨ Liriknya, "We all need a lifeline when struggling through hard times," bikin aku mikir tentang dirimu dan beragam masalah yang
+              dihadapi di Skema. Dan saat liriknya bilang, "When your puzzle needs solving, you can count on me," just like my promise, bahwa aku akan membantu dan selalu ada di sampingmu dalam setiap masalah yang kamu hadapi. 🤝💡
+            </p>
+          </div>
+          <div class="buttons">
+            <button onclick="navigate('prev', 3)">Sebelumnya</button>
+            <button onclick="navigate('next', 3)">Selanjutnya</button>
+          </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="section" id="section4">
+          <div class="box">
+            <h2>Massage 💬💬</h2>
+            <p>Mungkin sekarang adalah waktu yang tepat. 🕰 Ada beberapa hal yang mungkin diriku di masa depan tidak akan mengucapkan langsung padamu. Mungkin karena malu, tapi aku yakin dia akan mengatakan ini:</p>
+          </div>
+          <div class="buttons">
+            <button onclick="navigate('prev', 4)">Sebelumnya</button>
+            <button onclick="navigate('next', 4)">Selanjutnya</button>
+          </div>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="section" id="section5">
+          <div class="box">
+            <h2>the point ✉️✉️</h2>
+            <p>
+              "Hai, Teh Ajriya. Aku senang berada di Skema. Sejak malam itu, pandanganku tentang Skema berubah 100%. Bukan ke arah yang buruk, tapi aku merasa Skema memiliki sesuatu yang berbeda. Ada sisi lain yang menurutmu mungkin cukup
+              berat bagiku, tapi menurutku, justru di sinilah letak kesenangannya. Sisi yang membuatku banyak belajar—belajar tentang Skema, dirimu, dan semua orang di sekitarnya." 🎓💬
+            </p>
+          </div>
+          <div class="buttons">
+            <button onclick="navigate('prev', 5)">Sebelumnya</button>
+            <button onclick="navigate('next', 5)">Selanjutnya</button>
+          </div>
+        </div>
+
+        <!-- Section 6 -->
+        <div class="section" id="section6">
+          <div class="box">
+            <h2>Text 📃📄</h2>
+            <p>
+              Yang paling membuatku senang adalah tiga hal: dirimmu, the path of your mind, dan catur. 🧠♟ Tiga hal ini berbeda, tapi rasanya mereka terhubung. Kamu, yang aku tahu bisa melakukan semuanya. The path of your mind yang unik,
+              dan entah kenapa, pikiranmu selalu sinkron dengan apa yang aku pikirkan. 🔄💭 Dan terakhir, catur—sesuatu yang awalnya terasa sangat rumit, seperti dirimu. Tapi, seiring waktu, semuanya menjadi jauh lebih sederhana. 🌀♟💡
+            </p>
+          </div>
+          <div class="buttons">
+            <button onclick="navigate('prev', 6)">Sebelumnya</button>
+            <button onclick="navigate('next', 6)">Selanjutnya</button>
+          </div>
+        </div>
+
+        <!-- Section 7 -->
+        <div class="section" id="section7">
+          <div class="box">
+            <h2>End 🌟☀️</h2>
+            <p>
+              Mungkin pesan ini kamu baca menjelang akhir masa kepengurusanmu, jadi yang bisa aku katakan adalah: thank you for everything. 🙏💖 Terima kasih untuk tahun ini. Terima kasih untuk 22, untuk Skema, dan terutama, terima kasih
+              untuk kamu, Teh Ajriya. 🌟✨ I am also grateful to Allah and His destiny, because last year was the best blessing—being able to meet Skema and you. 🌠💫 At the end of story, I like you...
+            </p>
+          </div>
+          <div class="buttons">
+            <button onclick="navigate('prev', 7)">Sebelumnya</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
